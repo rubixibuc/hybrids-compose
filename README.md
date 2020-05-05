@@ -8,7 +8,7 @@
 import compose from "hybrids-compose";
 
 const Component = {
-  prop: compose(descriptorFactoryOne(), descriptorFactoryTwo()),
+  prop: compose(descriptorFactoryOne(), descriptorFactoryTwo() /*...*/),
 };
 ```
 
