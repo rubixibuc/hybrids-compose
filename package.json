@@ -2,11 +2,8 @@
   "name": "hybrids-compose",
   "version": "0.0.0",
   "description": "compose hybrids.js component property descriptors",
-  "main": "dist/bundle.js",
-  "scripts": {
-    "build": "rollup src/index.js --file dist/bundle.js --format umd --name \"hybridsCompose\"",
-    "prepublishOnly": "npm ci && npm run build"
-  },
+  "main": "src/index.js",
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rubixibuc/hybrids-compose.git"
@@ -43,6 +40,6 @@
     "*.{json,html,md}": "prettier --write"
   },
   "files": [
-    "dist/bundle.js"
+    "src/index.js"
   ]
 }

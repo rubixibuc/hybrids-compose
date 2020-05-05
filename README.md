@@ -5,7 +5,7 @@
 ### Example
 
 ```javascript 1.8
-import { compose } from "hybrids-compose";
+import compose from "hybrids-compose";
 
 const Component = {
   prop: compose(componentFactoryOne(), componentFactoryTwo()),
