@@ -30,7 +30,7 @@ const methodMap = (method, descriptors) => ({
   },
 });
 
-exports.compose = (...descriptors) =>
+module.exports = (...descriptors) =>
   descriptors.reduceRight(
     (descriptors, descriptor) => ({
       ...descriptors,
