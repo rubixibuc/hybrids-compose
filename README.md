@@ -12,7 +12,7 @@ const Component = {
 };
 ```
 
-#### Rules
+### Rules
 
 - definitions compose right to left
 - get handlers compose by passing previous handler result into **lastValue**
