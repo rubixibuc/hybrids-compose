@@ -1,6 +1,6 @@
 # hybrids-compose
 
-## compose hybrids.js component property definitions
+## compose hybrids.js component property descriptors
 
 ### Example
 
