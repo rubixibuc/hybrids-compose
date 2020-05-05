@@ -1,10 +1,12 @@
 {
   "name": "hybrids-compose",
   "version": "0.0.0",
-  "description": "Compose hybrids.js component property definitions",
-  "main": "index.js",
+  "description": "compose hybrids.js component property descriptors",
+  "main": "dist/bundle.js",
+  "module": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup src/index.js --file dist/bundle.js --format umd --name \"hybridsCompose\"",
+    "prepublishOnly": "npm ci && npm run build"
   },
   "repository": {
     "type": "git",
@@ -19,5 +21,32 @@
   "bugs": {
     "url": "https://github.com/rubixibuc/hybrids-compose/issues"
   },
-  "homepage": "https://github.com/rubixibuc/hybrids-compose#readme"
+  "homepage": "https://github.com/rubixibuc/hybrids-compose#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "firebase": "^7.14.1",
+    "husky": "^4.2.3",
+    "jest": "^26.0.1",
+    "lint-staged": "^10.0.10",
+    "parcel": "^1.12.4",
+    "prettier": "^2.0.2",
+    "rollup": "^2.7.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,mjs}": [
+      "eslint --fix"
+    ],
+    "*.{json,html,md}": "prettier --write"
+  },
+  "files": [
+    "dist/bundle.js"
+  ]
 }
