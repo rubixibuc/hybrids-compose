@@ -1,0 +1,23 @@
+{
+  "name": "hybrids-compose",
+  "version": "0.0.0",
+  "description": "Compose hybrids.js component property definitions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubixibuc/hybrids-compose.git"
+  },
+  "keywords": [
+    "hybrids",
+    "compose"
+  ],
+  "author": "rubixibuc@gmail.com",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/rubixibuc/hybrids-compose/issues"
+  },
+  "homepage": "https://github.com/rubixibuc/hybrids-compose#readme"
+}
