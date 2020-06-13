@@ -19,3 +19,4 @@ const Component = {
 - set handlers compose by passing previous handler result into **value**
 - connect handlers compose by calling them in order, and their disconnects callbacks in reverse order
 - observe handlers compose by calling them in order
+- supports descriptor translations
