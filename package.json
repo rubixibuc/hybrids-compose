@@ -28,8 +28,7 @@
     "husky": "^4.2.3",
     "hybrids": "^4.1.9",
     "lint-staged": "^10.0.10",
-    "prettier": "^2.0.2",
-    "rollup": "^2.7.2"
+    "prettier": "^2.0.2"
   },
   "husky": {
     "hooks": {
@@ -43,6 +42,6 @@
     "*.{json,md}": "prettier --write"
   },
   "files": [
-    "src/index.js"
+    "src/"
   ]
 }
