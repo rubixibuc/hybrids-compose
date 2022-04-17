@@ -5,10 +5,26 @@
 ### Example
 
 ```javascript 1.8
-import compose from "hybrids-compose";
+import { compose, composeWithValue } from "hybrids-compose";
 
 const Component = {
-  prop: compose(descriptorFactoryOne(), descriptorFactoryTwo() /*...*/),
+  prop: compose(
+    descriptorFactoryOne(),
+    descriptorFactoryTwo(),
+    descriptorFactoryN()
+  ),
+};
+
+// or
+// someValue = undefined || null || boolean || number || string
+
+const Component = {
+  prop: composeWithValue(
+    someValue,
+    descriptorFactoryOne(),
+    descriptorFactoryTwo(),
+    descriptorFactoryN()
+  ),
 };
 ```
 

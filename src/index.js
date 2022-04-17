@@ -1,5 +1,3 @@
-const { property } = require("hybrids");
-
 const methodMap = (method, descriptors) => ({
   connect: (...args) => {
     let disconnect;
@@ -35,14 +33,12 @@ const methodMap = (method, descriptors) => ({
 const translate = (descriptor) => {
   if (typeof descriptor === "function") {
     return { get: descriptor };
-  } else if (descriptor !== Object(descriptor) || Array.isArray(descriptor)) {
-    return { ...property(descriptor) };
   } else {
     return descriptor;
   }
 };
 
-module.exports = (...descriptors) =>
+const composeDescriptors = (...descriptors) =>
   descriptors.reduceRight(
     (descriptors, descriptor) => ({
       ...descriptors,
@@ -65,3 +61,10 @@ module.exports = (...descriptors) =>
     }),
     {}
   );
+
+exports.compose = (...descriptors) => composeDescriptors(...descriptors);
+
+exports.composeWithValue = (value, ...descriptors) => ({
+  value,
+  ...composeDescriptors(...descriptors),
+});
