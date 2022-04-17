@@ -1,6 +1,6 @@
 {
   "name": "hybrids-compose",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "compose hybrids.js component property descriptors",
   "main": "src/index.js",
   "scripts": {},
